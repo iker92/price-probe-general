@@ -1,0 +1,5 @@
+{
+  "Primary_feature": "item",
+  "Forecast_feature": "price",
+  "Test_size" :"10%"
+}
