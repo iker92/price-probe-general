@@ -1,8 +1,12 @@
 # price-probe-general purpose
 
-General purpose ARIMA algorithm. With your time series data, you have to specify in conf/conf.json :
+General purpose ARIMA algorithm. With your time series data.
 
--The primary feature, if not present beacause the training set is all about one thing, add another column in csv file with a name in all rows <br>
--The forecast feature, column name of the value that will be forecasted <br>
--The size of the test_set, e.g. 10% <br>
-The date information must be like 'YYYY-MM-DD'
+## How to make it work
+- Install all dependencies via `pip install -r requirements.txt`
+Edit your `conf/conf.json` like:
+- Primary feature, if not present. It's required to have a primary key, in our case `item` in order to make the algorithm work.
+- Forecast feature, column name of the value that will be forecasted
+- Size of the test_set, e.g. 10%
+
+The date format must be like `YYYY-MM-DD`
