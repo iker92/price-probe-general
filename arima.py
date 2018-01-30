@@ -148,7 +148,7 @@ def find_best_result(results):
     return best_result
 
 
-def find_p_d_q_values(prices_column: pd.Series, prices_elements_number:int):
+def find_p_d_q_values(prices_column, prices_elements_number):
 
     # First time a ACF value crosses positive threshold (AR)
     p = 0
@@ -162,7 +162,7 @@ def find_p_d_q_values(prices_column: pd.Series, prices_elements_number:int):
     return p, d, q
 
 
-def compute_acf_pacf(prices_column: pd.Series, prices_elements_number: int):
+def compute_acf_pacf(prices_column, prices_elements_number):
     # ACF = Autocorrelation Function. How big are clusters of data containing elements with similar trend.
     # https://onlinecourses.science.psu.edu/stat510/node/60
     # Threshold values for ACF and PACF for 95% Confidence Interval
@@ -247,7 +247,7 @@ def check_unique_values(exogenous_features_names, exogenous_features):
     return results
 
 
-def filter_unique_values(features: pd.Series):
+def filter_unique_values(features):
     first_value = features.values[0]
     if not first_value and first_value != 0.0:
         return True
